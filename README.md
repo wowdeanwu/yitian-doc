@@ -8,3 +8,8 @@
     数据库：待定    <br>
     构建：  Grunt
     ....
+    <br>
+    
+  ##启动
+    *1. npm install
+    *2. grunt serve
