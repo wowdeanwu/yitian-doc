@@ -10,6 +10,6 @@
     ....
     <br>
     
-  ##启动
-    *1. npm install
-    *2. grunt serve
+##启动
+  * 1. npm install
+  * 2. grunt serve
