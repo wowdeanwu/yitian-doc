@@ -1,0 +1,34 @@
+<div class="sidebar documentation" ng-controller="SidebarCtrl">
+	<ul class="nav nav-sidebar">
+		<li ng-repeat="catagory in catagories">
+			<a href="#" class="category">{{catagory.title}}</a>
+			<div class="pull-right category-setting">
+				<a class="edit" href=""><i class="glyphicon glyphicon-edit"></i></a>
+				<a class="delete" href=""><i class="glyphicon glyphicon-remove"></i></a>
+				<a class="create" href=""><i class="glyphicon glyphicon-plus"></i></a>
+			</div>
+			<div>
+				<ul class="nav nav-sidebar subnav">
+					<li ng-repeat="page in catagory.pages">
+						<a href="#" class="category-item"><i class="glyphicon glyphicon-file"></i>{{page.title}}</a>
+						<div class="pull-right category-setting">
+							<a class="delete" href=""><i class="glyphicon glyphicon-remove"></i></a>
+						</div>
+					</li>
+				</ul>
+			</div></li>
+		</ul>
+		<a href="" class="add-catagory" ng-click="addCategory()"><i class="glyphicon glyphicon-plus-sign"></i>添加目录</a>
+		<script type="text/ng-template" id="addCategoryModal.html">
+	        <div class="modal-header">
+	            <h3 class="modal-title">添加目录</h3>
+	        </div>
+	        <div class="modal-body">
+	            <input type="text" class="form-control" ng-model="categoryName" placeholder="目录名称">
+	        </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-primary" type="button" ng-click="ok()">确定</button>
+	            <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+	        </div>
+	    </script>
+	</div>
